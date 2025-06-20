@@ -255,10 +255,10 @@ function App() {
       <p>Obazz Street</p>
       <p>Lagos, Nigeria</p>
       <p>101001</p>
-     <div className="flex gap-4 mt-4">
+      <div className="flex gap-4 mt-4">
         <a href="#"><i className="fab fa-facebook-f text-xl"></i></a>
         <a href="#"><i className="fab fa-twitter text-xl"></i></a>
-        <a href="https://www.instagram.com/obazzfc"><i className="fab fa-instagram text-xl"></i></a>
+        <a href="#"><i className="fab fa-instagram text-xl"></i></a>
         <a href="#"><i className="fab fa-youtube text-xl"></i></a>
         <a href="#"><i className="fab fa-tiktok text-xl"></i></a>
       </div>
