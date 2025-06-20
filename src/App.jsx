@@ -85,13 +85,13 @@ function App() {
     <div className="grid md:grid-cols-2 gap-8">
       <iframe
         className="w-full aspect-video rounded shadow"
-        src="https://www.youtube.com/embed/oHg5SJYRHA0"
+        src="https://https://youtu.be/p5CjaRIMrfs"
         title="Highlight 1"
         allowFullScreen
       ></iframe>
       <iframe
         className="w-full aspect-video rounded shadow"
-        src="https://www.youtube.com/embed/6_b7RDuLwcI"
+        src="https://https://youtu.be/p5CjaRIMrfs"
         title="Highlight 2"
         allowFullScreen
       ></iframe>
