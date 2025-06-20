@@ -153,7 +153,7 @@ function App() {
         {
           title: "Obazz FC Secures Comeback Win!",
           date: "June 18, 2025",
-          image: "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=700&q=80"
+          image: '/slide1.jpg',
         },
         {
           title: "Captain Signs Contract Extension",
