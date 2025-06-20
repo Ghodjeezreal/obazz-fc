@@ -63,11 +63,11 @@ function App() {
   modules={[Autoplay, EffectFade, Navigation]}
   autoplay={{ delay: 7000, disableOnInteraction: false }}
   loop={true}
-  speed={1000}
+  speed={1200}
   effect="fade"
   navigation={{
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+    nextEl: ".custom-next",
+    prevEl: ".custom-prev"
   }}
   className="h-screen w-full relative"
 >
@@ -96,38 +96,45 @@ function App() {
   ].map((slide, idx) => (
     <SwiperSlide key={idx}>
       <div
-        className="relative h-screen w-full bg-cover bg-center flex items-center justify-center text-center"
+        className="relative h-screen w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${slide.bg})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative z-10 px-6 text-white">
-          <h1 className="text-5xl md:text-6xl font-bold text-yellow-400 mb-4">{slide.title}</h1>
-          <p className="text-lg md:text-2xl mb-6">{slide.text}</p>
-          <a
-            href={slide.link}
-            className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
-          >
-            {slide.button}
-          </a>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6 z-10">
+          <div>
+            <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-400 mb-4 drop-shadow-lg">{slide.title}</h1>
+            <p className="text-lg md:text-2xl text-white mb-6">{slide.text}</p>
+            <a
+              href={slide.link}
+              className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
+            >
+              {slide.button}
+            </a>
+          </div>
         </div>
       </div>
     </SwiperSlide>
   ))}
 
   {/* Left Arrow */}
-  <div className="swiper-button-prev bg-white/20 hover:bg-white/40 text-white rounded-full p-3 absolute left-4 top-1/2 transform -translate-y-1/2 z-20 cursor-pointer">
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-    </svg>
+  <div className="custom-prev absolute left-4 top-1/2 transform -translate-y-1/2 z-20">
+    <button className="bg-white/60 hover:bg-white/90 text-blue-900 p-2 rounded-full shadow-lg">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
   </div>
 
   {/* Right Arrow */}
-  <div className="swiper-button-next bg-white/20 hover:bg-white/40 text-white rounded-full p-3 absolute right-4 top-1/2 transform -translate-y-1/2 z-20 cursor-pointer">
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
+  <div className="custom-next absolute right-4 top-1/2 transform -translate-y-1/2 z-20">
+    <button className="bg-white/60 hover:bg-white/90 text-blue-900 p-2 rounded-full shadow-lg">
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
   </div>
 </Swiper>
+
 
       {/* Match Center Section */}
       <section id="matches" className="bg-white text-blue-900 py-16 px-6">
