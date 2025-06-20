@@ -93,8 +93,9 @@ function App() {
       link: "#matches",
       button: "Match Info"
     }
-  ].map((slide, idx) => (
-    <SwiperSlide key={index}>
+    {slides.map((slide, index) => (
+  <SwiperSlide key={index}>  // ✅ index is now defined properly
+
   <div className="relative h-screen overflow-hidden">
     <img
       src={slide.bg}
