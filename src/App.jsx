@@ -121,9 +121,6 @@ function App() {
         <div className="swiper-button-prev !bg-white !text-blue-900 !w-10 !h-10 rounded-full shadow-lg flex items-center justify-center !left-4 z-10"></div>
         <div className="swiper-button-next !bg-white !text-blue-900 !w-10 !h-10 rounded-full shadow-lg flex items-center justify-center !right-4 z-10"></div>
       </Swiper>
-      <div className="swiper-button-prev absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-40 hover:bg-opacity-80 text-blue-900 p-3 rounded-full shadow-lg cursor-pointer" />
-<div className="swiper-button-next absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white bg-opacity-40 hover:bg-opacity-80 text-blue-900 p-3 rounded-full shadow-lg cursor-pointer" />
-
        {/* Match Center Section */}
       <section id="matches" className="bg-white text-blue-900 py-16 px-6">
         <div className="max-w-6xl mx-auto">
