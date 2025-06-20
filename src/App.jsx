@@ -83,12 +83,7 @@ function App() {
   <div className="max-w-6xl mx-auto">
     <h2 className="text-3xl font-bold text-center mb-10">Video Highlights</h2>
     <div className="grid md:grid-cols-2 gap-8">
-      <iframe
-        className="w-full aspect-video rounded shadow"
-        src="https://www.youtube.com/watch?v=p5CjaRIMrfs"
-        title="Highlight 1"
-        allowFullScreen
-      ></iframe>
+     <iframe width="1378" height="775" src="https://www.youtube.com/embed/p5CjaRIMrfs" title="Obazz FC VS Ighalo FC - Club Friendly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <iframe
         className="w-full aspect-video rounded shadow"
         src="https://www.youtube.com/watch?v=p5CjaRIMrfs"
