@@ -30,7 +30,20 @@ function App() {
       <section id="matches" className="bg-white text-blue-900 py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">Match Center</h2>
-          {/* News Section */}
+         
+          {/* NEXT MATCH */}
+          <div className="bg-blue-100 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center shadow-md mb-12">
+            <div>
+              <p className="uppercase text-sm font-semibold text-blue-600">Next Match</p>
+              <h3 className="text-2xl font-bold mt-2">Obazz FC vs Thunder United</h3>
+              <p className="text-gray-700 mt-1">Saturday, June 29 · 5:00 PM</p>
+              <p className="text-gray-600 text-sm">Obazz Arena</p>
+            </div>
+            <div className="mt-6 md:mt-0">
+              <a href="#" className="px-5 py-2 bg-yellow-400 text-blue-900 font-semibold rounded hover:bg-yellow-500 transition">Get Tickets</a>
+            </div>
+          </div>
+           {/* News Section */}
 <section id="news" className="bg-blue-900 text-white py-16 px-6">
   <div className="max-w-6xl mx-auto">
     <h2 className="text-3xl font-bold text-center mb-10 text-yellow-400">Latest News</h2>
@@ -65,20 +78,6 @@ function App() {
     </div>
   </div>
 </section>
-
-
-          {/* NEXT MATCH */}
-          <div className="bg-blue-100 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center shadow-md mb-12">
-            <div>
-              <p className="uppercase text-sm font-semibold text-blue-600">Next Match</p>
-              <h3 className="text-2xl font-bold mt-2">Obazz FC vs Thunder United</h3>
-              <p className="text-gray-700 mt-1">Saturday, June 29 · 5:00 PM</p>
-              <p className="text-gray-600 text-sm">Obazz Arena</p>
-            </div>
-            <div className="mt-6 md:mt-0">
-              <a href="#" className="px-5 py-2 bg-yellow-400 text-blue-900 font-semibold rounded hover:bg-yellow-500 transition">Get Tickets</a>
-            </div>
-          </div>
 
           {/* RECENT RESULTS */}
           <h3 className="text-xl font-bold mb-4">Recent Results</h3>
