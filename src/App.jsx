@@ -71,14 +71,14 @@ function App() {
             button: "View Fixtures"
           },
           {
-            bg: "https://images.unsplash.com/photo-1605201104351-6b8e0b81db4d?q=80",
+            bg: "https://images.unsplash.com/photo-1750279807548-5abb78c50683?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: "Official Obazz FC Kits",
             text: "Look sharp. Play proud.",
             link: "#store",
             button: "Shop Now"
           },
           {
-            bg: "https://images.unsplash.com/photo-1579980755000-bc27edbb0b2c?q=80",
+            bg: "https://images.unsplash.com/photo-1430232324554-8f4aebd06683?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             title: "Upcoming Derby Match",
             text: "Saturday, June 29 · Obazz Arena",
             link: "#matches",
