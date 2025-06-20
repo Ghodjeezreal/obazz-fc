@@ -8,7 +8,7 @@ function App() {
       <header
         className="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
         style={{
-          backgroundImage: "url('/obazz-hero.jpg')", // Replace with your image if local
+          backgroundImage: "url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", // Replace with your image if local
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
