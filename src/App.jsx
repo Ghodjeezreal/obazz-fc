@@ -151,17 +151,17 @@ function App() {
     <div className="grid gap-8 md:grid-cols-3">
       {[
         {
-          title: "Obazz FC Secures Comeback Win!",
+          title: "Obazz FC is Family!",
           date: "June 18, 2025",
           image: '/slide1.jpg',
         },
         {
-          title: "Captain Signs Contract Extension",
+          title: "Yusuf Bamidele played the match of his career! – FK Vojvodina",
           date: "June 12, 2025",
           image: '/Dele.jpg',
         },
         {
-          title: "Training Gallery: Focus Ahead of Derby",
+          title: "Moses is at it again week after week!!!",
           date: "June 10, 2025",
           image:'/moses.jpg',
         }
