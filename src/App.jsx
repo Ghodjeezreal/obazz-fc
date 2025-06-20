@@ -7,6 +7,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const slides = [
     {
       bg: 'https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1938',
@@ -74,12 +75,46 @@ function App() {
       </ul>
 
       {/* Hamburger for mobile */}
-      <button className="md:hidden text-blue-900">
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+     <button
+  onClick={() => setMobileMenuOpen(true)}
+  className="md:hidden text-blue-900"
+>
+  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
     </nav>
+      {mobileMenuOpen && (
+  <div className="fixed inset-0 z-50 flex">
+    {/* Glass-like blurred overlay */}
+    <div
+      onClick={() => setMobileMenuOpen(false)}
+      className="absolute inset-0 backdrop-blur-md bg-black/30 transition-opacity duration-500"
+    />
+
+    {/* Slide-in menu */}
+    <div
+      className="ml-auto w-3/4 max-w-sm h-full bg-white/90 backdrop-blur-xl shadow-2xl transform translate-x-0 animate-slide-in text-blue-900 p-6 flex flex-col space-y-6 z-50"
+    >
+      <button
+        onClick={() => setMobileMenuOpen(false)}
+        className="text-right text-blue-900 text-2xl font-bold mb-4"
+      >
+        ✕
+      </button>
+
+      <a href="#" className="hover:underline text-lg">LATEST</a>
+      <a href="#" className="hover:underline text-lg">WATCH</a>
+      <a href="#" className="hover:underline text-lg">MEN'S TEAM</a>
+      <a href="#" className="hover:underline text-lg">WOMEN'S TEAM</a>
+      <a href="#" className="hover:underline text-lg">TICKETS</a>
+      <a href="#" className="hover:underline text-lg">SHOP</a>
+      <a href="#" className="hover:underline text-sm mt-auto">LOGIN / REGISTER</a>
+    </div>
+  </div>
+)}
+
+
 
       {/* HERO SLIDER SECTION */}
       <Swiper
