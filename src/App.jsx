@@ -255,30 +255,12 @@ function App() {
       <p>Obazz Street</p>
       <p>Lagos, Nigeria</p>
       <p>101001</p>
-     {/* Right: Social Icons */}
-    <div>
-      <h4 className="text-yellow-400 font-semibold mb-3">Follow Us</h4>
-      <div className="flex gap-4 mt-2">
-        {/* Facebook */}
-        <a href="#" aria-label="Facebook">
-          <svg className="w-5 h-5 fill-current hover:text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91V127.91c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S293.32 0 263.36 0C181.67 0 141.09 54.42 141.09 122.89v73.44H89.09V288h52v224h100.2V288z"/></svg>
-        </a>
-        {/* Twitter */}
-        <a href="#" aria-label="Twitter">
-          <svg className="w-5 h-5 fill-current hover:text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.4 151.7c.3 2.8.3 5.7.3 8.5 0 87-66.3 187.2-187.2 187.2-37.2 0-71.8-10.9-100.8-29.6 5.2.6 10.4.8 15.6.8a132.4 132.4 0 0082.1-28.3c-24.6-.4-45.4-16.7-52.6-39 3.4.6 6.8.9 10.4.9 5 0 9.8-.7 14.3-1.9-26-5.2-45.4-28.1-45.4-55.5v-.7c7.6 4.2 16.3 6.8 25.5 7.2a66.4 66.4 0 01-29.5-55.1c0-12.2 3.3-23.6 9-33.4a187.5 187.5 0 00136 69.3c-1.1-4.9-1.7-9.9-1.7-15.1 0-36.2 29.4-65.5 65.5-65.5 18.8 0 35.9 7.9 47.8 20.7a130.9 130.9 0 0041.3-15.8c-4.2 13.1-13.1 24.1-24.6 31 11.6-1.4 22.6-4.5 32.8-9-7.7 11.4-17.4 21.6-28.6 29.8z"/></svg>
-        </a>
-        {/* Instagram */}
-        <a href="https://www.instagram.com/obazzfc" aria-label="Instagram">
-          <svg className="w-5 h-5 fill-current hover:text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 202.66A53.34 53.34 0 1170.66 256 53.34 53.34 0 01224 202.66zm124.71-41.42a54 54 0 00-30.9-30.9C286.84 120 224 120 224 120s-62.84 0-93.81 10.35a54 54 0 00-30.9 30.9C89 151.66 89 224 89 224s0 62.84 10.35 93.81a54 54 0 0030.9 30.9C161.16 376 224 376 224 376s62.84 0 93.81-10.35a54 54 0 0030.9-30.9C359 286.84 359 224 359 224s0-62.84-10.35-93.81zM224 338a114 114 0 11114-114 114.13 114.13 0 01-114 114zm146.4-150.1a26.6 26.6 0 1126.6-26.6 26.6 26.6 0 01-26.6 26.6z"/></svg>
-        </a>
-        {/* YouTube */}
-        <a href="#" aria-label="YouTube">
-          <svg className="w-5 h-5 fill-current hover:text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.6-24.9-42.2-48.5-48.5C455.1 64 288 64 288 64s-167.1 0-213.3 11.6c-23.6 6.3-42.2 24.9-48.5 48.5C16.6 170.3 16 213.8 16 256s.6 85.7 10.2 131.9c6.3 23.6 24.9 42.2 48.5 48.5C120.9 448 288 448 288 448s167.1 0 213.3-11.6c23.6-6.3 42.2-24.9 48.5-48.5C559.4 341.7 560 298.2 560 256s-.6-85.7-10.3-131.9zM232 336V176l142 80-142 80z"/></svg>
-        </a>
-        {/* TikTok (optional custom) */}
-        <a href="#" aria-label="TikTok">
-          <svg className="w-5 h-5 fill-current hover:text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448,209.9V152c-36.4,0-72.5-12.4-101.3-35.2V332c0,66.3-53.7,120-120,120S106.7,398.3,106.7,332s53.7-120,120-120c5.6,0,11.1,0.5,16.5,1.4v-60.6c-5.5-0.7-11.1-1.1-16.5-1.1C100.3,151.7,0,252,0,376s100.3,224,224,224s224-100.3,224-224C448,287.2,454.6,247.6,448,209.9z"/></svg>
-        </a>
+     <div className="flex gap-4 mt-4">
+        <a href="#"><i className="fab fa-facebook-f text-xl"></i></a>
+        <a href="#"><i className="fab fa-twitter text-xl"></i></a>
+        <a href="https://www.instagram.com/obazzfc"><i className="fab fa-instagram text-xl"></i></a>
+        <a href="#"><i className="fab fa-youtube text-xl"></i></a>
+        <a href="#"><i className="fab fa-tiktok text-xl"></i></a>
       </div>
     </div>
 
