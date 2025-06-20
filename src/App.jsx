@@ -205,9 +205,9 @@ function App() {
     <h2 className="text-3xl font-bold text-center mb-10">Meet the Team</h2>
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
       {[
-        { name: "Oba Skillz", position: "Forward", image: "https://randomuser.me/api/portraits/men/11.jpg" },
-        { name: "Jay Smart", position: "Midfielder", image: "https://randomuser.me/api/portraits/men/32.jpg" },
-        { name: "Zee Blocker", position: "Goalkeeper", image: "https://randomuser.me/api/portraits/men/45.jpg" }
+        { name: "Patrick Obaze", position: "Founder", image: '/coach-thumbnail.jpg',},
+        { name: "Jay Smart", position: "Head Coach", image: "https://randomuser.me/api/portraits/men/32.jpg" },
+        { name: "Ghod", position: "IT Specialist", image: "https://randomuser.me/api/portraits/men/45.jpg" }
       ].map((player, idx) => (
         <div key={idx} className="bg-white rounded-lg shadow hover:shadow-md text-center p-4">
           <img src={player.image} alt={player.name} className="w-28 h-28 rounded-full mx-auto mb-4 object-cover" />
