@@ -1,7 +1,9 @@
 import React from 'react';
 import './index.css';
-import { Link } from 'react-router-dom'; // this line is only necessary if you're using Routes
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { Autoplay } from 'swiper/modules';
 function App() {
   return (
   <>
@@ -53,27 +55,56 @@ function App() {
         </svg>
       </button>
     </nav>
-      {/* HERO SECTION */}
-      <header
-        className="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1938&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')", // Replace with your image if local
-        }}
+      {/* HERO SLIDESHOW */}
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 4000 }}
+        loop={true}
+        className="h-screen w-full"
       >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative z-10 px-6">
-          <h1 className="text-5xl md:text-6xl font-bold text-yellow-400 mb-4 drop-shadow-lg">
-            Welcome to Obazz FC
-          </h1>
-          <p className="text-lg md:text-2xl mb-6">Pride. Passion. Performance.</p>
-          <a
-            href="#matches"
-            className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
-          >
-            View Fixtures
-          </a>
-        </div>
-      </header>
+        {[
+          {
+            bg: "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80",
+            title: "Welcome to Obazz FC",
+            text: "Pride. Passion. Performance.",
+            link: "#matches",
+            button: "View Fixtures"
+          },
+          {
+            bg: "https://images.unsplash.com/photo-1605201104351-6b8e0b81db4d?q=80",
+            title: "Official Obazz FC Kits",
+            text: "Look sharp. Play proud.",
+            link: "#store",
+            button: "Shop Now"
+          },
+          {
+            bg: "https://images.unsplash.com/photo-1579980755000-bc27edbb0b2c?q=80",
+            title: "Upcoming Derby Match",
+            text: "Saturday, June 29 · Obazz Arena",
+            link: "#matches",
+            button: "Match Info"
+          }
+        ].map((slide, idx) => (
+          <SwiperSlide key={idx}>
+            <div
+              className="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
+              style={{ backgroundImage: `url(${slide.bg})` }}
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+              <div className="relative z-10 px-6 text-white">
+                <h1 className="text-5xl md:text-6xl font-bold text-yellow-400 mb-4">{slide.title}</h1>
+                <p className="text-lg md:text-2xl mb-6">{slide.text}</p>
+                <a
+                  href={slide.link}
+                  className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
+                >
+                  {slide.button}
+                </a>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       {/* Match Center Section */}
       <section id="matches" className="bg-white text-blue-900 py-16 px-6">
