@@ -30,6 +30,42 @@ function App() {
       <section id="matches" className="bg-white text-blue-900 py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">Match Center</h2>
+          {/* News Section */}
+<section id="news" className="bg-blue-900 text-white py-16 px-6">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-10 text-yellow-400">Latest News</h2>
+
+    <div className="grid gap-8 md:grid-cols-3">
+      {[
+        {
+          title: "Obazz FC Secures Comeback Win!",
+          date: "June 18, 2025",
+          image: "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          title: "Captain Signs Contract Extension",
+          date: "June 12, 2025",
+          image: "https://images.unsplash.com/photo-1605201104351-6b8e0b81db4d?auto=format&fit=crop&w=700&q=80"
+        },
+        {
+          title: "Training Gallery: Focus Ahead of Derby",
+          date: "June 10, 2025",
+          image: "https://images.unsplash.com/photo-1593082191862-1232ef58f8c8?auto=format&fit=crop&w=700&q=80"
+        }
+      ].map((news, idx) => (
+        <div key={idx} className="bg-white text-blue-900 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+          <img src={news.image} alt={news.title} className="w-full h-48 object-cover" />
+          <div className="p-4">
+            <p className="text-sm text-gray-500">{news.date}</p>
+            <h3 className="text-lg font-bold mt-2 mb-2">{news.title}</h3>
+            <a href="#" className="text-sm text-yellow-500 hover:underline">Read more →</a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
           {/* NEXT MATCH */}
           <div className="bg-blue-100 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center shadow-md mb-12">
