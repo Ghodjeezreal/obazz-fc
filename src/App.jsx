@@ -34,115 +34,95 @@ function App() {
   return (
     <>
       {/* Top Utility Nav */}
-    <div className="bg-white text-xs text-gray-700 px-6 py-2 flex justify-between items-center border-b">
-      <div className="flex gap-6">
-        <a href="#" className="hover:underline">VENUE</a>
-        <a href="#" className="hover:underline">OBAZZ FOUNDATION</a>
-        <a href="#" className="hover:underline">NO TO HATE</a>
-      </div>
-      <div className="flex gap-4">
-        <a href="#" className="hover:underline">LOGIN</a>
-        <a href="#" className="hover:underline">REGISTER</a>
-      </div>
-    </div>
-
-    {/* Main Navbar */}
-    <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between relative z-50">
-      {/* Logo */}
-      <div className="flex items-center gap-4">
-        <img src="/obazz-logo.png" alt="Obazz FC" className="w-12 h-12 object-contain" />
-        <span className="font-bold text-blue-900 text-xl">OBAZZ FC</span>
+      <div className="bg-white text-xs text-gray-700 px-6 py-2 flex justify-between items-center border-b">
+        <div className="flex gap-6">
+          <a href="#" className="hover:underline">VENUE</a>
+          <a href="#" className="hover:underline">OBAZZ FOUNDATION</a>
+          <a href="#" className="hover:underline">NO TO HATE</a>
+        </div>
+        <div className="flex gap-4">
+          <a href="#" className="hover:underline">LOGIN</a>
+          <a href="#" className="hover:underline">REGISTER</a>
+        </div>
       </div>
 
-      {/* Main Menu */}
-      <ul className="hidden md:flex gap-8 font-semibold text-blue-900 text-sm">
-        <li className="hover:underline"><a href="#">LATEST</a></li>
-        <li className="hover:underline"><a href="#">WATCH</a></li>
-        <li className="group relative">
-          <a href="#" className="hover:underline">MEN'S TEAM</a>
-          {/* Dropdown */}
-          <ul className="absolute left-0 mt-2 w-64 bg-blue-900 text-white p-4 rounded shadow-lg hidden group-hover:block">
-            <li className="mb-2"><a href="#" className="hover:underline">Fixtures / Results / Tables</a></li>
-            <li className="mb-2"><a href="#" className="hover:underline">Buy Tickets</a></li>
-            <li className="mb-2"><a href="#" className="hover:underline">Latest News</a></li>
-            <li className="mb-2"><a href="#" className="hover:underline">Player & Staff Profiles</a></li>
-            <li><a href="#" className="hover:underline">The Academy</a></li>
-          </ul>
-        </li>
-        <li className="hover:underline"><a href="#">WOMEN'S TEAM</a></li>
-        <li className="hover:underline"><a href="#">TICKETS & HOSPITALITY</a></li>
-        <li className="hover:underline"><a href="#">SHOP</a></li>
-      </ul>
+      {/* Main Navbar */}
+      <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between relative z-50">
+        {/* Logo */}
+        <div className="flex items-center gap-4">
+          <img src="/obazz-logo.png" alt="Obazz FC" className="w-12 h-12 object-contain" />
+          <span className="font-bold text-blue-900 text-xl">OBAZZ FC</span>
+        </div>
 
-      {/* Hamburger for mobile */}
-     <button
-  onClick={() => setMobileMenuOpen(true)}
-  className="md:hidden text-blue-900"
->
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-</button>
-    </nav>
+        {/* Main Menu */}
+        <ul className="hidden md:flex gap-8 font-semibold text-blue-900 text-sm">
+          <li className="hover:underline"><a href="#">LATEST</a></li>
+          <li className="hover:underline"><a href="#">WATCH</a></li>
+          <li className="group relative">
+            <a href="#" className="hover:underline">MEN'S TEAM</a>
+            {/* Dropdown */}
+            <ul className="absolute left-0 mt-2 w-64 bg-blue-900 text-white p-4 rounded shadow-lg hidden group-hover:block">
+              <li className="mb-2"><a href="#" className="hover:underline">Fixtures / Results / Tables</a></li>
+              <li className="mb-2"><a href="#" className="hover:underline">Buy Tickets</a></li>
+              <li className="mb-2"><a href="#" className="hover:underline">Latest News</a></li>
+              <li className="mb-2"><a href="#" className="hover:underline">Player & Staff Profiles</a></li>
+              <li><a href="#" className="hover:underline">The Academy</a></li>
+            </ul>
+          </li>
+          <li className="hover:underline"><a href="#">WOMEN'S TEAM</a></li>
+          <li className="hover:underline"><a href="#">TICKETS & HOSPITALITY</a></li>
+          <li className="hover:underline"><a href="#">SHOP</a></li>
+        </ul>
+
+        {/* Hamburger for mobile */}
+        <button onClick={() => setMobileMenuOpen(true)} className="md:hidden text-blue-900">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+
       {mobileMenuOpen && (
-  <div className="fixed inset-0 z-50 flex">
-    {/* Glass-like blurred overlay */}
-    <div
-      onClick={() => setMobileMenuOpen(false)}
-      className="absolute inset-0 backdrop-blur-md bg-black/30 transition-opacity duration-500"
-    />
+        <div className="fixed inset-0 z-50 flex">
+          {/* Glass-like blurred overlay */}
+          <div onClick={() => setMobileMenuOpen(false)} className="absolute inset-0 backdrop-blur-md bg-black/30 transition-opacity duration-500" />
 
-    {/* Slide-in menu */}
-    <div
-  className="ml-auto w-3/4 max-w-sm h-full bg-blue-900 text-white backdrop-blur-xl shadow-2xl transform translate-x-0 animate-slide-in p-6 flex flex-col space-y-6 z-50"
->
-  <button
-    onClick={() => setMobileMenuOpen(false)}
-    className="text-right text-white text-2xl font-bold mb-4"
-  >
-    ✕
-  </button>
-
-  <a href="#" className="hover:underline text-lg">LATEST</a>
-  <a href="#" className="hover:underline text-lg">WATCH</a>
-  <a href="#" className="hover:underline text-lg">MEN'S TEAM</a>
-  <a href="#" className="hover:underline text-lg">WOMEN'S TEAM</a>
-  <a href="#" className="hover:underline text-lg">TICKETS</a>
-  <a href="#" className="hover:underline text-lg">SHOP</a>
-  <a href="#" className="hover:underline text-sm mt-auto">LOGIN / REGISTER</a>
-</div>
-
-
-
+          {/* Slide-in menu */}
+          <div className="ml-auto w-3/4 max-w-sm h-full bg-blue-900 text-white backdrop-blur-xl shadow-2xl transform translate-x-0 animate-slide-in p-6 flex flex-col space-y-6 z-50">
+            <button onClick={() => setMobileMenuOpen(false)} className="text-right text-white text-2xl font-bold mb-4">✕</button>
+            <a href="#" className="hover:underline text-lg">LATEST</a>
+            <a href="#" className="hover:underline text-lg">WATCH</a>
+            <a href="#" className="hover:underline text-lg">MEN'S TEAM</a>
+            <a href="#" className="hover:underline text-lg">WOMEN'S TEAM</a>
+            <a href="#" className="hover:underline text-lg">TICKETS</a>
+            <a href="#" className="hover:underline text-lg">SHOP</a>
+            <a href="#" className="hover:underline text-sm mt-auto">LOGIN / REGISTER</a>
+          </div>
+        </div>
+      )}
 
       {/* HERO SLIDER SECTION */}
       <Swiper
-  modules={[Autoplay, EffectFade, Navigation]}
-  effect="fade"
-  autoplay={{ delay: 7000, disableOnInteraction: false }}
-  loop
-  slidesPerView={1} // Shows one slide at a time
-  allowTouchMove={true} // Enables swipe gestures on mobile
-  navigation={{
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }}
-  className="w-full h-screen relative"
->
+        modules={[Autoplay, EffectFade, Navigation]}
+        effect="fade"
+        autoplay={{ delay: 7000, disableOnInteraction: false }}
+        loop
+        slidesPerView={1}
+        allowTouchMove={true}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        className="w-full h-screen relative"
+      >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="h-screen bg-cover bg-center relative"
-              style={{ backgroundImage: `url(${slide.bg})` }}
-            >
+            <div className="h-screen bg-cover bg-center relative" style={{ backgroundImage: `url(${slide.bg})` }}>
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center">
                 <div className="z-10 text-white">
                   <h2 className="text-4xl md:text-5xl font-bold mb-4">{slide.title}</h2>
                   <p className="text-lg mb-6">{slide.subtitle}</p>
-                  <a
-                    href={slide.link}
-                    className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
-                  >
+                  <a href={slide.link} className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition">
                     {slide.button}
                   </a>
                 </div>
@@ -155,6 +135,7 @@ function App() {
         <div className="swiper-button-prev !bg-white !text-blue-900 !w-10 !h-10 rounded-full shadow-lg flex items-center justify-center !left-4 z-10"></div>
         <div className="swiper-button-next !bg-white !text-blue-900 !w-10 !h-10 rounded-full shadow-lg flex items-center justify-center !right-4 z-10"></div>
       </Swiper>
+
        {/* Match Center Section */}
       <section id="matches" className="bg-white text-blue-900 py-16 px-6">
         <div className="max-w-6xl mx-auto">
@@ -275,7 +256,6 @@ function App() {
           </div>
     </div>
         </section>
-    </div>
   </>
   );
 }
