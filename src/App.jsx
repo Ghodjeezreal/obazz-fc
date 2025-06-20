@@ -94,28 +94,27 @@ function App() {
       button: "Match Info"
     }
   ].map((slide, idx) => (
-    <SwiperSlide key={idx}>
-      <div className="relative h-screen w-full overflow-hidden">
-        <img
-          src={slide.bg}
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-400 mb-4 drop-shadow-lg">{slide.title}</h1>
-            <p className="text-lg md:text-2xl text-white mb-6">{slide.text}</p>
-            <a
-              href={slide.link}
-              className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
-            >
-              {slide.button}
-            </a>
-          </div>
-        </div>
-      </div>
-    </SwiperSlide>
+    <SwiperSlide key={index}>
+  <div className="relative h-screen overflow-hidden">
+    <img
+      src={slide.bg}
+      alt="Background"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
+    <div className="relative z-20 text-center px-4">
+      <h1 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-4">{slide.title}</h1>
+      <p className="text-lg md:text-2xl mb-6">{slide.subtitle}</p>
+      <a
+        href={slide.link}
+        className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
+      >
+        {slide.buttonText}
+      </a>
+    </div>
+  </div>
+</SwiperSlide>
+
   ))}
 
   {/* Left Arrow */}
