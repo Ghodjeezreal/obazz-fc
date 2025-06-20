@@ -69,7 +69,7 @@ function App() {
     nextEl: ".custom-next",
     prevEl: ".custom-prev"
   }}
-  className="h-screen w-full relative"
+  className="relative h-screen w-full"
 >
   {[
     {
@@ -95,12 +95,14 @@ function App() {
     }
   ].map((slide, idx) => (
     <SwiperSlide key={idx}>
-      <div
-        className="relative h-screen w-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${slide.bg})` }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        <div className="absolute inset-0 flex items-center justify-center text-center px-6 z-10">
+      <div className="relative h-screen w-full overflow-hidden">
+        <img
+          src={slide.bg}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
           <div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-400 mb-4 drop-shadow-lg">{slide.title}</h1>
             <p className="text-lg md:text-2xl text-white mb-6">{slide.text}</p>
