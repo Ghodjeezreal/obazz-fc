@@ -8,6 +8,7 @@ import 'swiper/css/navigation';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
   const slides = [
     {
       bg: 'https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1938',
@@ -31,6 +32,7 @@ function App() {
       button: 'Shop Now'
     }
   ];
+
   return (
     <>
       {/* Top Utility Nav */}
@@ -48,19 +50,16 @@ function App() {
 
       {/* Main Navbar */}
       <nav className="bg-white shadow-md px-6 py-4 flex items-center justify-between relative z-50">
-        {/* Logo */}
         <div className="flex items-center gap-4">
           <img src="/obazz-logo.png" alt="Obazz FC" className="w-12 h-12 object-contain" />
           <span className="font-bold text-blue-900 text-xl">OBAZZ FC</span>
         </div>
 
-        {/* Main Menu */}
         <ul className="hidden md:flex gap-8 font-semibold text-blue-900 text-sm">
           <li className="hover:underline"><a href="#">LATEST</a></li>
           <li className="hover:underline"><a href="#">WATCH</a></li>
           <li className="group relative">
             <a href="#" className="hover:underline">MEN'S TEAM</a>
-            {/* Dropdown */}
             <ul className="absolute left-0 mt-2 w-64 bg-blue-900 text-white p-4 rounded shadow-lg hidden group-hover:block">
               <li className="mb-2"><a href="#" className="hover:underline">Fixtures / Results / Tables</a></li>
               <li className="mb-2"><a href="#" className="hover:underline">Buy Tickets</a></li>
@@ -74,23 +73,16 @@ function App() {
           <li className="hover:underline"><a href="#">SHOP</a></li>
         </ul>
 
-        {/* Hamburger for mobile */}
-        <button
-  onClick={() => setMobileMenuOpen(true)}
-  className="block md:hidden text-blue-900"
->
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-</button>
+        <button onClick={() => setMobileMenuOpen(true)} className="block md:hidden text-blue-900">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </nav>
 
       {mobileMenuOpen && (
-  <div className="fixed inset-0 z-50 flex">
-          {/* Glass-like blurred overlay */}
+        <div className="fixed inset-0 z-50 flex">
           <div onClick={() => setMobileMenuOpen(false)} className="absolute inset-0 backdrop-blur-md bg-black/30 transition-opacity duration-500" />
-
-          {/* Slide-in menu */}
           <div className="ml-auto w-3/4 max-w-sm h-full bg-blue-900 text-white backdrop-blur-xl shadow-2xl transform translate-x-0 animate-slide-in p-6 flex flex-col space-y-6 z-50">
             <button onClick={() => setMobileMenuOpen(false)} className="text-right text-white text-2xl font-bold mb-4">✕</button>
             <a href="#" className="hover:underline text-lg">LATEST</a>
@@ -112,10 +104,7 @@ function App() {
         loop
         slidesPerView={1}
         allowTouchMove={true}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
+        navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
         className="w-full h-screen relative"
       >
         {slides.map((slide, index) => (
@@ -133,8 +122,6 @@ function App() {
             </div>
           </SwiperSlide>
         ))}
-
-        {/* Arrows inside boxes */}
         <div className="swiper-button-prev !bg-white !text-blue-900 !w-10 !h-10 rounded-full shadow-lg flex items-center justify-center !left-4 z-10"></div>
         <div className="swiper-button-next !bg-white !text-blue-900 !w-10 !h-10 rounded-full shadow-lg flex items-center justify-center !right-4 z-10"></div>
       </Swiper>
