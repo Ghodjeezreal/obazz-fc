@@ -7,6 +7,29 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 
 function App() {
+  const slides = [
+    {
+      bg: 'https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1938',
+      title: 'Welcome to Obazz FC',
+      subtitle: 'Pride. Passion. Performance.',
+      link: '#matches',
+      button: 'View Fixtures'
+    },
+    {
+      bg: 'https://images.unsplash.com/photo-1509475826633-fed577a2c71b',
+      title: 'Feel the Thrill of the Game',
+      subtitle: 'Join our journey to glory',
+      link: '#news',
+      button: 'Latest News'
+    },
+    {
+      bg: 'https://images.unsplash.com/photo-1597643253822-c0d93de5c00a',
+      title: 'Get Your Official Kit',
+      subtitle: 'Shop the latest Obazz merch',
+      link: '#store',
+      button: 'Shop Now'
+    }
+  ];
   return (
     <>
       {/* Top Utility Nav */}
