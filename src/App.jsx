@@ -9,7 +9,7 @@ function App() {
     <div className="bg-white text-xs text-gray-700 px-6 py-2 flex justify-between items-center border-b">
       <div className="flex gap-6">
         <a href="#" className="hover:underline">VENUE</a>
-        <a href="#" className="hover:underline">CHELSEA FOUNDATION</a>
+        <a href="#" className="hover:underline">OBAZZ FOUNDATION</a>
         <a href="#" className="hover:underline">NO TO HATE</a>
       </div>
       <div className="flex gap-4">
