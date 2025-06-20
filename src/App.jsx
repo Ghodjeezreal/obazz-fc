@@ -185,8 +185,7 @@ function App() {
     <div className="grid md:grid-cols-2 gap-8">
      <iframe
         className="w-full aspect-video rounded shadow"
-        src="https://www.youtube.com/embed/p5CjaRIMrfs
-"
+        src="https://www.youtube.com/embed/FodjjrDpdI8"
         title="Highlight 2"
         allowFullScreen
       ></iframe>
