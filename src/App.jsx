@@ -3,7 +3,7 @@ import './index.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import { EffectFade } from 'swiper/modules';
 function App() {
@@ -59,12 +59,16 @@ function App() {
     </nav>
       {/* HERO SLIDESHOW */}
       <Swiper
-  modules={[Autoplay]}
+  modules={[Autoplay, EffectFade, Navigation]}
   autoplay={{ delay: 7000, disableOnInteraction: false }}
   loop={true}
   speed={1000}
   effect="fade"
-  className="h-screen w-full"
+  navigation={{
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  }}
+  className="h-screen w-full relative"
 >
   {[
     {
@@ -75,14 +79,14 @@ function App() {
       button: "View Fixtures"
     },
     {
-      bg: "https://images.unsplash.com/photo-1750279807548-5abb78c50683?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      bg: "https://images.unsplash.com/photo-1605201104351-6b8e0b81db4d?q=80",
       title: "Official Obazz FC Kits",
       text: "Look sharp. Play proud.",
       link: "#store",
       button: "Shop Now"
     },
     {
-      bg: "https://images.unsplash.com/photo-1430232324554-8f4aebd06683?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      bg: "https://images.unsplash.com/photo-1579980755000-bc27edbb0b2c?q=80",
       title: "Upcoming Derby Match",
       text: "Saturday, June 29 · Obazz Arena",
       link: "#matches",
@@ -108,6 +112,20 @@ function App() {
       </div>
     </SwiperSlide>
   ))}
+
+  {/* Left Arrow */}
+  <div className="swiper-button-prev bg-white/20 hover:bg-white/40 text-white rounded-full p-3 absolute left-4 top-1/2 transform -translate-y-1/2 z-20 cursor-pointer">
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+  </div>
+
+  {/* Right Arrow */}
+  <div className="swiper-button-next bg-white/20 hover:bg-white/40 text-white rounded-full p-3 absolute right-4 top-1/2 transform -translate-y-1/2 z-20 cursor-pointer">
+    <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
 </Swiper>
 
       {/* Match Center Section */}
