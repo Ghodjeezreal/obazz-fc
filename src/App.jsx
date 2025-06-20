@@ -1,8 +1,21 @@
 import React from 'react';
 import './index.css';
+import { Link } from 'react-router-dom'; // this line is only necessary if you're using Routes
 
 function App() {
   return (
+    <div className="bg-blue-900 text-white min-h-screen">
+
+      {/* NAVBAR */}
+      <nav className="bg-yellow-400 text-blue-900 px-4 py-4 shadow-md flex justify-center gap-10 font-semibold text-lg sticky top-0 z-50">
+        <a href="#home" className="hover:underline">Home</a>
+        <a href="#matches" className="hover:underline">Matches</a>
+        <a href="#news" className="hover:underline">News</a>
+        <a href="#videos" className="hover:underline">Videos</a>
+        <a href="#team" className="hover:underline">Team</a>
+        <a href="#store" className="hover:underline">Store</a>
+      </nav>
+
     <div className="bg-blue-900 text-white min-h-screen">
       {/* HERO SECTION */}
       <header
