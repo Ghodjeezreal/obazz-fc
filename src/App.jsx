@@ -94,25 +94,24 @@ function App() {
 
     {/* Slide-in menu */}
     <div
-      className="ml-auto w-3/4 max-w-sm h-full bg-blue-900 backdrop-blur-xl shadow-2xl transform translate-x-0 animate-slide-in text-blue-900 p-6 flex flex-col space-y-6 z-50"
-    >
-      <button
-        onClick={() => setMobileMenuOpen(false)}
-        className="text-right text-blue-900 text-2xl font-bold mb-4"
-      >
-        ✕
-      </button>
+  className="ml-auto w-3/4 max-w-sm h-full bg-blue-900 text-white backdrop-blur-xl shadow-2xl transform translate-x-0 animate-slide-in p-6 flex flex-col space-y-6 z-50"
+>
+  <button
+    onClick={() => setMobileMenuOpen(false)}
+    className="text-right text-white text-2xl font-bold mb-4"
+  >
+    ✕
+  </button>
 
-      <a href="#" className="hover:underline text-lg">LATEST</a>
-      <a href="#" className="hover:underline text-lg">WATCH</a>
-      <a href="#" className="hover:underline text-lg">MEN'S TEAM</a>
-      <a href="#" className="hover:underline text-lg">WOMEN'S TEAM</a>
-      <a href="#" className="hover:underline text-lg">TICKETS</a>
-      <a href="#" className="hover:underline text-lg">SHOP</a>
-      <a href="#" className="hover:underline text-sm mt-auto">LOGIN / REGISTER</a>
-    </div>
-  </div>
-)}
+  <a href="#" className="hover:underline text-lg">LATEST</a>
+  <a href="#" className="hover:underline text-lg">WATCH</a>
+  <a href="#" className="hover:underline text-lg">MEN'S TEAM</a>
+  <a href="#" className="hover:underline text-lg">WOMEN'S TEAM</a>
+  <a href="#" className="hover:underline text-lg">TICKETS</a>
+  <a href="#" className="hover:underline text-lg">SHOP</a>
+  <a href="#" className="hover:underline text-sm mt-auto">LOGIN / REGISTER</a>
+</div>
+
 
 
 
