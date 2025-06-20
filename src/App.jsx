@@ -5,7 +5,6 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay, EffectFade, Navigation } from 'swiper/modules';
 import 'swiper/css/effect-fade';
-import { EffectFade } from 'swiper/modules';
 function App() {
   return (
   <>
