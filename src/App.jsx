@@ -245,6 +245,57 @@ function App() {
           </div>
     </div>
         </section>
+      <footer className="bg-blue-900 text-white pt-12">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 pb-10 border-b border-white/20">
+    {/* Address */}
+    <div>
+      <img src="/obazz-logo.png" alt="Obazz FC" className="w-12 mb-4" />
+      <p className="font-bold">Obazz Football Club</p>
+      <p>Victory Ground</p>
+      <p>Obazz Street</p>
+      <p>Lagos, Nigeria</p>
+      <p>101001</p>
+      <div className="flex gap-4 mt-4">
+        <a href="#"><i className="fab fa-facebook-f text-xl"></i></a>
+        <a href="#"><i className="fab fa-twitter text-xl"></i></a>
+        <a href="#"><i className="fab fa-instagram text-xl"></i></a>
+        <a href="#"><i className="fab fa-youtube text-xl"></i></a>
+        <a href="#"><i className="fab fa-tiktok text-xl"></i></a>
+      </div>
+    </div>
+
+    {/* Links */}
+    <div className="text-sm space-y-3">
+      <p className="font-bold">About The Club</p>
+      <p><a href="#" className="hover:underline">Contact Us & FAQs</a></p>
+      <p><a href="#" className="hover:underline">Frequently Asked Questions</a></p>
+      <p><a href="#" className="hover:underline">The Shed – Chat, Rumours & More</a></p>
+    </div>
+
+    {/* App Promo */}
+    <div>
+      <p className="text-sm mb-4">Get unrivalled access to all things Obazz FC with the Official App...</p>
+      <div className="flex gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="App Store" className="h-10" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-10" />
+      </div>
+    </div>
+  </div>
+
+  <div className="bg-blue-950 text-xs text-white/70 py-6 mt-4 px-6">
+    <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
+      <div className="flex gap-6 flex-wrap">
+        <a href="#" className="hover:underline">Careers</a>
+        <a href="#" className="hover:underline">Privacy Policy</a>
+        <a href="#" className="hover:underline">Cookies Policy</a>
+        <a href="#" className="hover:underline">Terms & Conditions</a>
+        <a href="#" className="hover:underline">Sustainability Policy</a>
+      </div>
+      <p className="mt-4 md:mt-0">&copy; 2025 Obazz FC. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
   </>
   );
 }
