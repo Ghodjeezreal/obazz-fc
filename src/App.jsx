@@ -78,6 +78,56 @@ function App() {
     </div>
   </div>
 </section>
+          {/* Video Highlights Section */}
+<section id="videos" className="bg-white text-blue-900 py-16 px-6">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-10">Video Highlights</h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      <iframe
+        className="w-full aspect-video rounded shadow"
+        src="https://www.youtube.com/embed/oHg5SJYRHA0"
+        title="Highlight 1"
+        allowFullScreen
+      ></iframe>
+      <iframe
+        className="w-full aspect-video rounded shadow"
+        src="https://www.youtube.com/embed/6_b7RDuLwcI"
+        title="Highlight 2"
+        allowFullScreen
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+{/* Team / Featured Players Section */}
+<section id="team" className="bg-blue-100 text-blue-900 py-16 px-6">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-10">Meet the Team</h2>
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      {[
+        { name: "Oba Skillz", position: "Forward", image: "https://randomuser.me/api/portraits/men/11.jpg" },
+        { name: "Jay Smart", position: "Midfielder", image: "https://randomuser.me/api/portraits/men/32.jpg" },
+        { name: "Zee Blocker", position: "Goalkeeper", image: "https://randomuser.me/api/portraits/men/45.jpg" }
+      ].map((player, idx) => (
+        <div key={idx} className="bg-white rounded-lg shadow hover:shadow-md text-center p-4">
+          <img src={player.image} alt={player.name} className="w-28 h-28 rounded-full mx-auto mb-4 object-cover" />
+          <h3 className="text-xl font-bold">{player.name}</h3>
+          <p className="text-sm text-gray-600">{player.position}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Store Promo Section */}
+<section id="store" className="bg-yellow-400 text-blue-900 py-20 px-6 text-center">
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-4xl font-bold mb-4">Official Obazz FC Store</h2>
+    <p className="text-lg mb-6">Get the latest kits, scarves, and fan gear from the official club store.</p>
+    <a href="#" className="inline-block bg-blue-900 text-yellow-400 px-6 py-3 rounded text-lg font-semibold hover:bg-blue-800 transition">Shop Now</a>
+  </div>
+</section>
+
 
           {/* RECENT RESULTS */}
           <h3 className="text-xl font-bold mb-4">Recent Results</h3>
