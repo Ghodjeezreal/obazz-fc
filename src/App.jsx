@@ -158,7 +158,7 @@ function App() {
         {
           title: "Captain Signs Contract Extension",
           date: "June 12, 2025",
-          image: "https://images.unsplash.com/photo-1605201104351-6b8e0b81db4d?auto=format&fit=crop&w=700&q=80"
+          image: '/slide2.jpg',
         },
         {
           title: "Training Gallery: Focus Ahead of Derby",
