@@ -15,8 +15,6 @@ function App() {
         <a href="#team" className="hover:underline">Team</a>
         <a href="#store" className="hover:underline">Store</a>
       </nav>
-
-    <div className="bg-blue-900 text-white min-h-screen">
       {/* HERO SECTION */}
       <header
         className="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
