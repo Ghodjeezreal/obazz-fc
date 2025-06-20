@@ -75,15 +75,18 @@ function App() {
         </ul>
 
         {/* Hamburger for mobile */}
-        <button onClick={() => setMobileMenuOpen(true)} className="md:hidden text-blue-900">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <button
+  onClick={() => setMobileMenuOpen(true)}
+  className="block md:hidden text-blue-900"
+>
+  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
       </nav>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 flex">
+  <div className="fixed inset-0 z-50 flex">
           {/* Glass-like blurred overlay */}
           <div onClick={() => setMobileMenuOpen(false)} className="absolute inset-0 backdrop-blur-md bg-black/30 transition-opacity duration-500" />
 
