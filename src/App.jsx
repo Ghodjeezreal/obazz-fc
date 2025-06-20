@@ -158,12 +158,12 @@ function App() {
         {
           title: "Captain Signs Contract Extension",
           date: "June 12, 2025",
-          image: '/slide2.jpg',
+          image: '/Dele.jpg',
         },
         {
           title: "Training Gallery: Focus Ahead of Derby",
           date: "June 10, 2025",
-          image: "https://images.unsplash.com/photo-1593082191862-1232ef58f8c8?auto=format&fit=crop&w=700&q=80"
+          image:'/moses.jpg',
         }
       ].map((news, idx) => (
         <div key={idx} className="bg-white text-blue-900 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
