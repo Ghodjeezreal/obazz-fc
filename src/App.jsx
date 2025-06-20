@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import 'swiper/css/effect-fade';
+import { EffectFade } from 'swiper/modules';
 function App() {
   return (
   <>
@@ -57,54 +59,56 @@ function App() {
     </nav>
       {/* HERO SLIDESHOW */}
       <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 4000 }}
-        loop={true}
-        className="h-screen w-full"
+  modules={[Autoplay]}
+  autoplay={{ delay: 7000, disableOnInteraction: false }}
+  loop={true}
+  speed={1000}
+  effect="fade"
+  className="h-screen w-full"
+>
+  {[
+    {
+      bg: "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80",
+      title: "Welcome to Obazz FC",
+      text: "Pride. Passion. Performance.",
+      link: "#matches",
+      button: "View Fixtures"
+    },
+    {
+      bg: "https://images.unsplash.com/photo-1750279807548-5abb78c50683?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Official Obazz FC Kits",
+      text: "Look sharp. Play proud.",
+      link: "#store",
+      button: "Shop Now"
+    },
+    {
+      bg: "https://images.unsplash.com/photo-1430232324554-8f4aebd06683?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      title: "Upcoming Derby Match",
+      text: "Saturday, June 29 · Obazz Arena",
+      link: "#matches",
+      button: "Match Info"
+    }
+  ].map((slide, idx) => (
+    <SwiperSlide key={idx}>
+      <div
+        className="relative h-screen w-full bg-cover bg-center flex items-center justify-center text-center"
+        style={{ backgroundImage: `url(${slide.bg})` }}
       >
-        {[
-          {
-            bg: "https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80",
-            title: "Welcome to Obazz FC",
-            text: "Pride. Passion. Performance.",
-            link: "#matches",
-            button: "View Fixtures"
-          },
-          {
-            bg: "https://images.unsplash.com/photo-1750279807548-5abb78c50683?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            title: "Official Obazz FC Kits",
-            text: "Look sharp. Play proud.",
-            link: "#store",
-            button: "Shop Now"
-          },
-          {
-            bg: "https://images.unsplash.com/photo-1430232324554-8f4aebd06683?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            title: "Upcoming Derby Match",
-            text: "Saturday, June 29 · Obazz Arena",
-            link: "#matches",
-            button: "Match Info"
-          }
-        ].map((slide, idx) => (
-          <SwiperSlide key={idx}>
-            <div
-              className="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
-              style={{ backgroundImage: `url(${slide.bg})` }}
-            >
-              <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-              <div className="relative z-10 px-6 text-white">
-                <h1 className="text-5xl md:text-6xl font-bold text-yellow-400 mb-4">{slide.title}</h1>
-                <p className="text-lg md:text-2xl mb-6">{slide.text}</p>
-                <a
-                  href={slide.link}
-                  className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
-                >
-                  {slide.button}
-                </a>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="relative z-10 px-6 text-white">
+          <h1 className="text-5xl md:text-6xl font-bold text-yellow-400 mb-4">{slide.title}</h1>
+          <p className="text-lg md:text-2xl mb-6">{slide.text}</p>
+          <a
+            href={slide.link}
+            className="inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-semibold rounded-lg transition"
+          >
+            {slide.button}
+          </a>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
       {/* Match Center Section */}
       <section id="matches" className="bg-white text-blue-900 py-16 px-6">
