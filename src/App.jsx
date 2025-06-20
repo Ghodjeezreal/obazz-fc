@@ -16,14 +16,14 @@ function App() {
       button: 'View Fixtures'
     },
     {
-      bg: 'https://images.unsplash.com/photo-1509475826633-fed577a2c71b',
+      bg: 'https://images.unsplash.com/photo-1430232324554-8f4aebd06683?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Feel the Thrill of the Game',
       subtitle: 'Join our journey to glory',
       link: '#news',
       button: 'Latest News'
     },
     {
-      bg: 'https://images.unsplash.com/photo-1597643253822-c0d93de5c00a',
+      bg: 'https://images.unsplash.com/photo-1750279807548-5abb78c50683?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'Get Your Official Kit',
       subtitle: 'Shop the latest Obazz merch',
       link: '#store',
